@@ -17,7 +17,7 @@ services:
       - "3000:3000"
 
   nginx-proxy:
-    image: quay.io/ukhomeofficedigital/nginx-proxy:v1.5.1
+    image: quay.io/ukhomeofficedigital/nginx-proxy-govuk:v3
     environment:
       - PROXY_SERVICE_HOST=proxy
       - PROXY_SERVICE_PORT=3001
@@ -29,9 +29,9 @@ services:
       - "80:80"
 
   proxy:
-    image: quay.io/ukhomeofficedigital/go-keycloak-proxy:v2.0.1
+    image: quay.io/ukhomeofficedigital/go-keycloak-proxy:v2.3.0
     environment:
-      - PROXY_CLIENT_SECERT=proxy-client-secret
+      - PROXY_CLIENT_SECRET=proxy-client-secret
       - PROXY_CLIENT_ID=proxy-client-id
       - PROXY_DISCOVERY_URL=realm-url
       - PROXY_LISTEN=proxy:3001
