@@ -163,7 +163,7 @@ The service uses the `config` package and reads the following environment variab
 
 ### Prerequisites
 
-- Node `>=24.15.0 <25.0.0`
+- Node `>=24.21.0 <25.0.0`
 - Yarn 1
 - Access to an S3 bucket and KMS key
 - A ClamAV REST endpoint
